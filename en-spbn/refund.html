@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Refund - Cartpanda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="order-details.html" class="back-link">&lt; Return</a>
+             <div class="header-right">
+                 <img src="images/cartpanda-logo.svg" alt="Cartpanda Logo" class="logo">
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="order-details-card">
+            <div class="card-section">
+                <div class="shop-info">
+                    <img src="images/super-app-logo.png" alt="SUPER APP Logo" class="shop-logo-large">
+                    <div>
+                        <p><strong>SUPER APP</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-section">
+                <h3>Refund</h3>
+                <form id="refundForm">
+                    <div class="form-group">
+                        <label for="refundReason">Select the reason for the refund (mandatory)</label>
+                        <select id="refundReason" required>
+                            <option value="" disabled selected>Choose an option</option>
+                            <option value="no-access">I have not been able to access the product yet</option>
+                            <option value="need-money">I need the money for other things</option>
+                            <option value="files-not-opening">I received access, but pages or files do not open</option>
+                            <option value="no-response">The seller does not respond to my support requests</option>
+                            <option value="bad-quality">The quality did not meet expectations</option>
+                            <option value="incomplete">The product is incomplete</option>
+                            <option value="duplicate">Duplicate purchase</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="additionalInfo">Additional Information (optional)</label>
+                        <textarea id="additionalInfo" rows="4" placeholder="Fill this field if you want to leave any additional observation"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="help-card">
+            <p><strong>Need help?</strong><br>Send us an email at support@cartpanda.com or call +1-866-637-2482</p>
+        </div>
+    </main>
+    
+    <footer class="main-footer">
+        <div class="container">
+            <p>Cartpanda Inc. 555 Republic Dr, Plano, Texas, 75074, USA.</p>
+            <p>&copy; 2025 All rights reserved</p>
+        </div>
+    </footer>
+    
+    <div id="confirmationModal" class="modal" style="display: none;">
+        <div class="modal-content text-center">
+            <img src="images/success-icon.svg" alt="Success" class="success-icon">
+            <h2>Refund requested</h2>
+            <p>You will receive an email with the status of your refund within up to 5 minutes. Please, check your SPAM folder.</p>
+            <button type="button" class="btn btn-secondary" id="closeConfirmButton">Close</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
