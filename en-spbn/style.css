@@ -1,0 +1,426 @@
+/* Basic Reset and Global Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f5f7;
+    color: #333;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+main {
+    flex: 1;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+.main-header {
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px 0;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 45px; /* Aumentado de 30px para 45px */
+}
+
+.back-link {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Footer */
+.main-footer {
+    background-color: #e9ecef;
+    color: #6c757d;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+.main-footer a {
+    color: #6c757d;
+    font-weight: bold;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    text-decoration: none; /* For <a> tags styled as buttons */
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+/* Forms */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+/* --- Homepage (index.html) --- */
+.main-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.info-text-block {
+    color: #555;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.find-order-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.find-order-container h1 {
+    margin-top: 0;
+    font-size: 1.8em;
+}
+
+.info-section {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px 0;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    flex-wrap: wrap;
+    max-width: 800px;
+}
+
+.info-box {
+    flex-basis: 22%;
+    padding: 15px;
+}
+.info-icon {
+    height: 40px;
+    width: 40px;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+/* Help Card Style */
+.help-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    margin: 40px auto;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    max-width: 800px;
+}
+.help-card p {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+.help-card strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* FAQ Section */
+.faq-section {
+    max-width: 800px;
+    margin: 40px auto;
+}
+.faq-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.faq-item {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.faq-item summary {
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    list-style: none; /* Remove default arrow */
+    position: relative;
+}
+.faq-item summary::-webkit-details-marker {
+    display: none; /* Remove arrow in Chrome/Safari */
+}
+.faq-item summary::after { /* Add custom '+' */
+    content: '+';
+    position: absolute;
+    right: 20px;
+    font-size: 1.5em;
+    color: #007bff;
+}
+.faq-item[open] summary::after { /* Change to '-' when open */
+    content: '−';
+}
+.faq-item p, .faq-item ul {
+    padding: 0 20px 20px 20px;
+    line-height: 1.6;
+}
+
+/* Modal (Pop-up) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+}
+.modal-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.modal-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+    color: #555;
+}
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.code-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+.code-inputs input {
+    width: 40px;
+    height: 50px;
+    text-align: center;
+    font-size: 1.5em;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+.modal-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+.text-center {
+    text-align: center;
+}
+.success-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+    color: #28a745; /* Cor verde de sucesso */
+}
+
+/* --- Orders Page (orders.html) --- */
+.orders-header {
+    margin-bottom: 20px;
+}
+.order-list .container {
+    max-width: 800px;
+}
+.order-item-link {
+    text-decoration: none;
+    color: inherit;
+}
+.order-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: box-shadow 0.2s;
+}
+.order-item:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.order-item-shop {
+    display: flex;
+    align-items: center;
+}
+.verified-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    color: #007bff;
+}
+
+.shop-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 4px;
+}
+.shop-name {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+/* --- Order Details & Refund Page --- */
+.order-details-card .container, .refund-section .container {
+    max-width: 800px;
+}
+.order-details-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    margin-top: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card-section {
+    padding: 25px;
+    border-bottom: 1px solid #e9ecef;
+}
+.card-section:last-child {
+    border-bottom: none;
+}
+.card-section h3 {
+    margin-top: 0;
+    font-size: 1.1em;
+}
+
+.shop-info {
+    display: flex;
+    align-items: center;
+}
+.shop-info p {
+    margin: 0;
+}
+.shop-logo-large {
+    width: 50px;
+    height: 50px;
+    margin-left: 8px;
+    margin-right: 20px;
+}
+
+.access-link {
+    display: block;
+    background-color: #eef5ff;
+    padding: 15px;
+    border-radius: 6px;
+    word-break: break-all;
+    margin: 15px 0;
+}
+
+.refund-policy {
+    font-size: 0.9em;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+.contact-seller {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.95em;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .main-content-grid {
+        grid-template-columns: 1fr;
+    }
+    .info-text-block {
+        order: 2; /* Move text below form on small screens */
+        text-align: center;
+    }
+    .find-order-container {
+        order: 1;
+    }
+    .info-section {
+        flex-direction: column;
+    }
+    .info-box {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+}
