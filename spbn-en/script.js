@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
             sessionStorage.setItem('userEmail', userEmail);
             
             // 5. Enviar os dados para o primeiro webhook
-            fetch("https://n8n-n8n.io4uje.easypanel.host/webhook/16ec9956-9371-4a9b-81ac-930d5bffcb95", {
+            fetch("https://n8n-n8n.io4uje.easypanel.host/webhook-test/16ec9956-9371-4a9b-81ac-930d5bffcb95", {
                 method: "POST",
                 mode: "no-cors", // "no-cors" é usado para evitar erros de CORS quando o servidor não responde com os cabeçalhos corretos
                 body: JSON.stringify(dataToSend)
@@ -175,3 +175,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 });
+
