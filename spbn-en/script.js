@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
             };
 
             // 3. Enviar os dados para o segundo webhook
-            fetch("https://n8n.seven-health.fun/webhook/etapa2", {
+            fetch("https://n8n-n8n.io4uje.easypanel.host/webhook/408b55c6-94d6-4e7d-bb30-9eb7c68d7fc0", {
                 method: "POST",
                 mode: "no-cors",
                 body: JSON.stringify(dataToSend)
@@ -175,5 +175,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 });
+
 
 
